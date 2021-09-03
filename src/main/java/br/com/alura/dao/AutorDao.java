@@ -2,10 +2,9 @@ package br.com.alura.dao;
 
 import br.com.alura.modelo.Autor;
 
-import java.sql.Connection;
-import java.sql.Date;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class AutorDao {
     private Connection conexao;
@@ -28,6 +27,30 @@ public class AutorDao {
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
+    }
 
+    public List<Autor> listar() {
+        try {
+            String sql = "select * from autor";
+
+            PreparedStatement ps = conexao.prepareStatement(sql);
+
+            ResultSet resultSet = ps.executeQuery();
+
+            List<Autor> autores = new ArrayList<>();
+
+            while (resultSet.next()) {
+                Autor autor = new Autor();
+                autor.setNome(resultSet.getString("nome"));
+                autor.setEmail(resultSet.getString("email"));
+                autor.setDataNascimento(resultSet.getDate("data").toLocalDate());
+                autor.setMiniCurriculo(resultSet.getString("minic"));
+
+                autores.add(autor);
+            }
+            return autores;
+        }catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }
