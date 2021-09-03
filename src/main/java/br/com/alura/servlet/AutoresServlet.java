@@ -1,6 +1,7 @@
 package br.com.alura.servlet;
 
-import br.com.alura.modelo.Autores;
+import br.com.alura.dao.AutorDao;
+import br.com.alura.modelo.Autor;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,7 +36,7 @@ public class AutoresServlet extends HttpServlet {
             LocalDate data = LocalDate.parse(req.getParameter("data"), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
             String minic = req.getParameter("minic");
 
-            Autores autor = new Autores(nome, email, data, minic);
+            Autor autor = new Autor(nome, email, data, minic);
 
             autorDao.cadastrar(autor);
 

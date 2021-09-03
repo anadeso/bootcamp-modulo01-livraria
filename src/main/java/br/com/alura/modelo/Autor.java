@@ -2,16 +2,16 @@ package br.com.alura.modelo;
 
 import java.time.LocalDate;
 
-public class Autores {
+public class Autor {
     private String nome;
     private String email;
     private LocalDate dataNascimento;
     private String miniCurriculo;
 
-    public Autores() {
+    public Autor() {
     }
 
-    public Autores(String nome, String email, LocalDate dataNascimento, String miniCurriculo) {
+    public Autor(String nome, String email, LocalDate dataNascimento, String miniCurriculo) {
         this.nome = nome;
         this.email = email;
         this.dataNascimento = dataNascimento;
@@ -52,7 +52,7 @@ public class Autores {
 
     @Override
     public String toString() {
-        return "Autores{" +
+        return "Autor{" +
                 "nome='" + nome + '\'' +
                 ", email='" + email + '\'' +
                 ", dataNascimento=" + dataNascimento +
