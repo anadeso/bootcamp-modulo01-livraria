@@ -1,6 +1,7 @@
 package br.com.alura.servlet;
 
 import br.com.alura.dao.AutorDao;
+import br.com.alura.factory.ConnectionFactory;
 import br.com.alura.modelo.Autor;
 
 import javax.servlet.ServletException;
@@ -18,7 +19,7 @@ public class AutoresServlet extends HttpServlet {
     private AutorDao autorDao;
 
     public AutoresServlet() {
-        this.autorDao = new AutorDao(new ConnectionFactory());
+        this.autorDao = new AutorDao(new ConnectionFactory().getConnection());
     }
 
     @Override
