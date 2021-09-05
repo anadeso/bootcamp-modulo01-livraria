@@ -1,7 +1,7 @@
 
 # Alura - Bootcamp Módulo01 - Livraria 
 <h1 align="center">
-    <a href="https://www.baeldung.com/get-started-with-java-series">🔗 Java</a>
+    <a href="https://www.baeldung.com/get-started-with-java-series">🔗 Java - Servlet</a>
 </h1>
 <p align="center">💜Aplicação web em Java para gerenciamento de uma livraria online.</p>
 
