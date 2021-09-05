@@ -1,6 +1,7 @@
 package br.com.alura.dao;
 
 import br.com.alura.modelo.Autor;
+import org.omg.CORBA.LongLongSeqHelper;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -40,7 +41,9 @@ public class AutorDao {
             List<Autor> autores = new ArrayList<>();
 
             while (resultSet.next()) {
+
                 Autor autor = new Autor();
+
                 autor.setNome(resultSet.getString("nome"));
                 autor.setEmail(resultSet.getString("email"));
                 autor.setDataNascimento(resultSet.getDate("data").toLocalDate());

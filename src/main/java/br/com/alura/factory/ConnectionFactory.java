@@ -7,7 +7,7 @@ public class ConnectionFactory {
 
     public Connection getConnection() {
         try {
-            String url = "jdbc:mysql://localhost:3306/autor";
+            String url = "jdbc:mysql://localhost:3306/autores";
             String usuario = "root";
             String senha = "";
             Class.forName("com.mysql.cj.jdbc.Driver");

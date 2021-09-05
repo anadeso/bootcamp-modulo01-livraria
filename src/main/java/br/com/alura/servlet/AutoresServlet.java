@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -31,10 +33,14 @@ public class AutoresServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        PrintWriter ptw = resp.getWriter();
+
         try {
             String nome = req.getParameter("nome");
             String email = req.getParameter("email");
+
             LocalDate data = LocalDate.parse(req.getParameter("data"), DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+
             String minic = req.getParameter("minic");
 
             Autor autor = new Autor(nome, email, data, minic);
@@ -47,4 +53,5 @@ public class AutoresServlet extends HttpServlet {
             resp.sendRedirect("autores?erro=campo invalido!");
         }
     }
+
 }
