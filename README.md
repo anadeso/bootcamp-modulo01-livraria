@@ -26,7 +26,7 @@ Além disto é bom ter um editor para trabalhar com o código de sua preferênci
 
 ### 🎲 Rodando o Back End (servidor)
 ### Clone este repositório
-$ git clone <https://github.com/tgmarinho/nlw1>
+$ git clone <https://github.com/anadeso/bootcamp-modulo01-livraria.git>
 
 ### Criar Database e Tabela
 $ database autores / tabela autor
