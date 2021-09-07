@@ -49,6 +49,5 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ---
 Feito com ❤️ por Ana Sousa 👋🏽 Entre em contato!
 
-[![Linkedin Badge](https://img.shields.io/badge/-Ana-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ana-sousa-1841a6104/)](https://www.linkedin.com/in/ana-sousa-1841a6104/) 
-[![Gmail Badge](https://img.shields.io/badge/-anadeso90@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:anadeso90@gmail.com)](mailto:anadeso90@gmail.com)
+[![Linkedin Badge](https://img.shields.io/badge/-Ana-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ana-sousa-1841a6104/)](https://www.linkedin.com/in/ana-sousa-1841a6104/)
 
