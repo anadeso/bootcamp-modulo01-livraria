@@ -56,7 +56,10 @@
             <tr>
                 <td>${t.nome}</td>
                 <td>${t.email}</td>
-                <td>${t.dataNascimento}</td>
+                <td>
+                  <fmt:parseDate value="${t.dataNascimento}" pattern="yyyy-MM-dd" var="formatada" type="date" />
+                  <fmt:formatDate value="${formatada}" pattern="dd/MM/yyyy" type="date"/>
+                </td>
             </tr>
         </c:forEach>
         </tbody>
